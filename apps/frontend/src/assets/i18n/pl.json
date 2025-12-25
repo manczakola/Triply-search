@@ -1,0 +1,18 @@
+{
+  "SIGN_UP": {
+    "CREATE_ACCOUNT": "Utwórz konto",
+    "START_PLANNING": "Rozpocznij planowanie swojej następnej przygody już dziś",
+    "ENTER_NAME": "Wpisz swoje pełne imię i nazwisko",
+    "FULL_NAME": "Imię i nazwisko",
+    "EMAIL": "E-mail",
+    "ENTER_EMAIL": "Wpisz swój e-mail",
+    "PASSWORD": "Hasło",
+    "CREATE_PASSWORD": "Utwórz hasło",
+    "CONFIRM_PASSWORD": "Potwierdź hasło",
+    "CONFIRM_PASSWORD_PLACEHOLDER": "Potwierdź swoje hasło",
+    "OR_CONTINUE_WITH": "Lub kontynuuj za pomocą",
+    "GOOGLE": "Google",
+    "SIGN_IN": "Zaloguj się",
+    "ALREADY_HAVE_ACCOUNT": "Juz masz konto?"
+  }
+}

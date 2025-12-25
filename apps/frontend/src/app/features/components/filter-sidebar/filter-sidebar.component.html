@@ -1,0 +1,75 @@
+<div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm sticky top-24">
+  <div class="flex items-center justify-between mb-8">
+    <h2 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+      <i-tabler name="adjustments-horizontal" class="w-5 h-5 text-blue -600"></i-tabler>
+      Filtry
+    </h2>
+    <button class="text-xs text-blue font-semibold hover:underline">Wyczyść</button>
+  </div>
+
+  <div class="mb-10">
+    <div class="flex justify-between items-center mb-4">
+      <label class="text-sm font-bold text-gray-700 uppercase tracking-wider">Cena</label>
+      <span class="text-sm font-medium text-gray-500">do {{ maxPrice() | number }} zł</span>
+    </div>
+    <input
+      type="range"
+      min="0"
+      max="20000"
+      step="500"
+      [(ngModel)]="maxPrice"
+      class="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+    />
+  </div>
+
+  <div class="mb-10">
+    <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wider mb-5">Biuro podróży</h3>
+    <div class="space-y-3">
+      @for (office of offices(); track office.id) {
+        <label class="flex items-center group cursor-pointer">
+          <div class="relative flex items-center">
+            <input
+              type="checkbox"
+              class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-gray-300 checked:bg-blue-600 checked:border-blue-600 transition-all"
+            />
+            <i-tabler
+              name="check"
+              class="absolute w-3.5 h-3.5 text-white opacity-0 peer-checked:opacity-100 left-0.5 pointer-events-none"
+            ></i-tabler>
+          </div>
+          <span class="ml-3 text-sm text-gray-600 group-hover:text-blue transition-colors">
+            {{ office.name }}
+          </span>
+        </label>
+      }
+    </div>
+  </div>
+
+  <div class="mb-10">
+    <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wider mb-5">Poziom trudności</h3>
+    <div class="space-y-3">
+      @for (diff of difficulties(); track diff) {
+        <label class="flex items-center gap-3 cursor-pointer group">
+          <input
+            type="checkbox"
+            class="h-5 w-5 rounded border-gray-300 text-blue focus:ring-blue-500"
+          />
+          <span class="text-sm text-gray-600 group-hover:text-blue -600">{{ diff }}</span>
+        </label>
+      }
+    </div>
+  </div>
+
+  <div>
+    <h3 class="text-sm font-bold text-gray-700 uppercase tracking-wider mb-5">Kategorie</h3>
+    <div class="flex flex-wrap gap-2">
+      @for (cat of categories(); track cat) {
+        <button
+          class="px-3 py-1.5 text-[11px] font-bold border border-gray-200 rounded-lg hover:border-blue-600 hover:text-blue transition-all uppercase tracking-tight text-gray-500"
+        >
+          {{ cat }}
+        </button>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+@let activities = homeStore.activities();
+
+<section class="py-24 px-6 w-full">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="font-serif italic text-2xl mb-2">Znajdź swój styl</h2>
+      <p class="text-blue text-5xl font-black uppercase tracking-tighter">Wybierz Swoją Przygodę</p>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
+      @for (act of activities; track act.name) {
+        <div
+          class="group relative h-96 rounded-3xl overflow-hidden cursor-pointer border border-white/5"
+        >
+          <img
+            [src]="act.image"
+            class="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:rotate-1"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
+          ></div>
+          <div class="absolute bottom-6 left-6">
+            <h3 class="text-white text-xl font-bold uppercase tracking-widest">{{ act.name }}</h3>
+            <div class="w-0 group-hover:w-full h-1 bg-blue transition-all duration-500"></div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

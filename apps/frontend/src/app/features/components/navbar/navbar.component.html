@@ -1,0 +1,50 @@
+<nav class="absolute top-0 left-0 w-full z-50 bg-transparent px-6 py-8">
+  <div class="px-6 mx-auto flex items-center justify-between">
+    <div
+      class="flex items-center gap-3 cursor-pointer transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-140"
+      (click)="navigateHome()"
+    >
+      <img
+        class="navbar__logo shadow-blue-200"
+        src="assets/images/triply-icon-blue.svg"
+        alt="logo"
+      />
+
+      <div class="flex flex-col">
+        <span class="text-4xl font-bold text-white tracking-tight leading-none">Triply</span>
+      </div>
+    </div>
+
+    <div class="hidden md:flex items-center gap-8">
+      <a
+        href="#"
+        class="text-lg font-semibold text-white transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-120"
+        >Wyprawy</a
+      >
+      <a
+        href="#"
+        class="text-lg font-semibold text-white transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-120"
+        >Biura podróży</a
+      >
+      <a
+        href="#"
+        class="text-lg font-semibold text-white transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-120"
+        >O nas</a
+      >
+
+      <div class="h-6 w-[1px] bg-gray-200"></div>
+      <button
+        class="flex items-center gap-2 text-lg font-bold text-white transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-120"
+      >
+        <i-tabler name="user-circle" class="w-5 h-5"></i-tabler>
+        Zaloguj się
+      </button>
+    </div>
+
+    <div class="md:hidden">
+      <button class="p-2 text-white hover:bg-slate-50 rounded-lg transition-colors">
+        <i-tabler name="menu-2"></i-tabler>
+      </button>
+    </div>
+  </div>
+</nav>

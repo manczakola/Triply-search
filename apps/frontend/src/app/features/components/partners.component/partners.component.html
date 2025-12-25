@@ -1,0 +1,14 @@
+@let partners = homeStore.partners();
+
+<section class="py-24 border-y border-black/5">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <p class="text-black/50 uppercase tracking-[0.3em] py-6 text-md font-bold mb-10">
+      Zaufali nam najlepsi organizatorzy
+    </p>
+    <div class="flex flex-wrap justify-center items-center gap-20 hover:grayscale-0 transition-all">
+      @for (partner of partners; track partner.name) {
+        <img [src]="partner.logo" [alt]="partner.name" class="h-8 md:h-20 w-auto" />
+      }
+    </div>
+  </div>
+</section>

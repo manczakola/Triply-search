@@ -1,0 +1,53 @@
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+  <div class="flex items-center gap-2">
+    <h2 class="text-xl font-bold text-gray-900">Znaleziono</h2>
+    <span class="px-3 py-1 bg-blue-100 text-blue -700 rounded-full text-sm font-black">
+      {{ totalResults() }}
+    </span>
+    <span class="text-gray-500 font-medium italic">ofert wypraw</span>
+  </div>
+
+  <div class="flex items-center gap-4">
+    <div class="relative group">
+      <button
+        class="flex items-center gap-2 px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-semibold text-gray-700 hover:border-blue-600 hover:text-blue transition-all shadow-sm"
+      >
+        <i-tabler name="arrows-sort" class="w-4 h-4"></i-tabler>
+        Sortuj: <span class="text-blue -600">{{ currentSort }}</span>
+        <i-tabler name="chevron-down" class="w-4 h-4 ml-1"></i-tabler>
+      </button>
+
+      <div
+        class="absolute right-0 mt-2 w-48 bg-white border border-gray-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20 overflow-hidden"
+      >
+        <button
+          (click)="onSortChange('Najniższa cena')"
+          class="w-full text-left px-4 py-3 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue transition-colors"
+        >
+          Cena: od najniższej
+        </button>
+        <button
+          (click)="onSortChange('Najwyższa cena')"
+          class="w-full text-left px-4 py-3 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue transition-colors"
+        >
+          Cena: od najwyższej
+        </button>
+        <button
+          (click)="onSortChange('Najpopularniejsze')"
+          class="w-full text-left px-4 py-3 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue transition-colors"
+        >
+          Najpopularniejsze
+        </button>
+      </div>
+    </div>
+
+    <div class="hidden sm:flex bg-gray-100 p-1 rounded-xl">
+      <button class="p-2 bg-white shadow-sm rounded-lg text-blue -600">
+        <i-tabler name="layout-grid" class="w-4 h-4"></i-tabler>
+      </button>
+      <button class="p-2 text-gray-400 hover:text-gray-600">
+        <i-tabler name="list" class="w-4 h-4"></i-tabler>
+      </button>
+    </div>
+  </div>
+</div>

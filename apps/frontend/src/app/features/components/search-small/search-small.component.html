@@ -1,0 +1,47 @@
+<section class="relative min-h-800 flex items-center overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img src="assets/images/background.jpg" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-3xl pb-28 pt-40">
+      <div
+        class="inline-flex items-center bg-white/10 backdrop-blur-xl border border-white/20 px-4 py-1 rounded-[2.5rem] shadow-2xl"
+      >
+        <div
+          class="flex-1 flex items-center px-4 w-full border-b md:border-b-0 md:border-r border-gray-100 group"
+        >
+          <i-tabler
+            name="map-pin"
+            class="text-white group-focus-within:text-blue transition-colors mr-3 w-5 h-5"
+          ></i-tabler>
+          <input
+            type="text"
+            placeholder="Dokąd chcesz pojechać?"
+            class="bg-transparent w-full py-4 text-white outline-none placeholder:text-white text-sm md:text-base"
+          />
+        </div>
+        <div
+          class="flex-1 flex items-center px-4 w-full border-b md:border-b-0 md:border-r border-gray-100 group"
+        >
+          <i-tabler
+            name="calendar"
+            class="text-white group-focus-within:text-blue transition-colors mr-3 w-5 h-5"
+          ></i-tabler>
+          <input
+            type="text"
+            placeholder="Kiedy?"
+            class="bg-transparent w-full py-4 text-white outline-none placeholder:text-white text-sm md:text-base"
+          />
+        </div>
+
+        <button
+          class="bg-transparent flex p-5 transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-120 ml-4"
+        >
+          <i-tabler name="search" class="text-white w-6 h-6"></i-tabler>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

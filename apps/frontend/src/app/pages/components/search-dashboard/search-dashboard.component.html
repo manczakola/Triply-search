@@ -1,0 +1,24 @@
+@let trips = tripsStore.trips();
+
+<main class="min-h-screen bg-brand-light">
+  <section class="bg-black/2000 text-white text-center">
+    <app-search-small></app-search-small>
+  </section>
+
+  <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <aside class="lg:col-span-1">
+      <app-filter-sidebar></app-filter-sidebar>
+    </aside>
+
+    <section class="lg:col-span-3">
+      <app-results-header [totalResults]="trips.length" (sortChange)="handleSort($event)">
+      </app-results-header>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        @for (trip of trips; track trip.id) {
+          <app-trip-card [trip]="trip"></app-trip-card>
+        }
+      </div>
+    </section>
+  </div>
+</main>

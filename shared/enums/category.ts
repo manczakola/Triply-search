@@ -1,0 +1,11 @@
+export enum Category {
+  TREKKING = 'TREKKING',
+  JOGA = 'JOGA',
+  SAFARI = 'SAFARI',
+  PHOTO = 'PHOTO',
+  CULTURE = 'CULTURE',
+  NATURE = 'NATURE',
+  CYCLING = 'CYCLING',
+  DIVING = 'DIVING',
+  FAMILY = 'FAMILY',
+}
